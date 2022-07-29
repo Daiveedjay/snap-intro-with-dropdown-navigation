@@ -1,0 +1,291 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  background: #fafafa;
+  color: hsl(0, 0%, 8%);
+}
+
+header {
+  position: relative;
+  padding: 1rem 2rem;
+  max-height: 10vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* LEFT NAVIGATION AREA STYLING*/
+.left-nav {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.left-nav-lists {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  transition: 0.3s all ease-in;
+}
+
+.left-nav-lists .nav-list-item {
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s all ease-in;
+  font-weight: 500;
+  transition: 0.3s all ease-in;
+}
+/* LEFT NAVIGATION AREA NAVIGATIONS AND INTERACTIONS */
+.left-nav-lists .nav-list-item:hover a {
+  color: hsl(0, 0%, 41%);
+}
+
+/* .left-nav-lists .nav-list-item p {
+  transition: 0.3s all ease-in;
+} */
+
+.left-nav-lists .nav-list-item:nth-child(3):hover,
+.left-nav-lists .nav-list-item:nth-child(4):hover {
+  color: hsl(0, 0%, 41%);
+}
+
+.left-nav-lists .nav-list-item:hover .fa-angle-down {
+  transform: rotate(-180deg);
+  transition: 0.3s all ease-in;
+}
+
+/* LEFT NAVIGATION AREA DROPDOWN MENU INTERACTION AND STYLING */
+.left-nav-lists .nav-list-item:hover .dropdown {
+  display: flex;
+}
+
+.nav-list-item .dropdown {
+  position: absolute;
+  top: 101%;
+  left: 0;
+  width: 100%;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  display: none;
+  background: #fff;
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.nav-list-item .dropdown li {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-list-item .dropdown span {
+  padding: 1rem;
+}
+
+.nav-list-item .dropdown li:hover {
+  background: #ebebeb;
+}
+
+.left-nav-lists .nav-list-item a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #000;
+}
+
+/* RIGHT NAVIGATION AREA STYLING */
+.right-nav {
+  align-items: center;
+  display: flex;
+}
+.right-nav-lists {
+  display: flex;
+  gap: 2rem;
+}
+
+.right-nav-lists .nav-list-item {
+  font-size: 1.4rem;
+  list-style: none;
+  font-weight: 700;
+}
+.right-nav-lists .nav-list-item {
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+/* RIGHT NAVIGATION AREA NAVIGATIONS AND INTERACTIONS */
+.right-nav-lists .nav-list-item:first-child:hover {
+  color: hsl(0, 0%, 41%);
+}
+.right-nav-lists .nav-list-item:last-child {
+  border: 1.5px solid hsl(0, 0%, 8%);
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.right-nav-lists .nav-list-item:last-child:hover {
+  background: hsl(0, 0%, 41%);
+  color: #fff;
+  border-color: hsl(0, 0%, 41%);
+}
+
+/* MOBILE NAVIGATION */
+.mobile-nav {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 3rem;
+  display: none;
+  z-index: 3;
+}
+
+.nav-open {
+  position: absolute;
+  right: 0;
+  z-index: 100;
+}
+
+.mobile-nav .nav-close {
+  display: none;
+}
+
+.mobile-nav-slide {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
+  background: #d5bebe;
+  transform: translateX(100%);
+  display: none;
+}
+
+.mobile-nav.active .mobile-nav-slide {
+  display: block;
+  transform: translate(0);
+}
+.mobile-list-slide {
+  margin-top: 8rem;
+  list-style: none;
+}
+
+.mobile-list-slide .nav-list-item {
+  font-size: 2.5rem;
+  padding: 1rem 2rem;
+}
+
+/* MAIN AREA STYLING */
+main {
+  max-height: 85vh;
+  height: 85vh;
+}
+
+.main-section {
+  display: flex;
+  padding: 2rem 8rem;
+}
+
+.hero-text-area,
+.hero-image-area {
+  flex: 1;
+}
+
+/* MAIN TEXTAREA STYLING */
+.hero-text-area {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.lead-text {
+  font-size: 6rem;
+  width: 90%;
+}
+
+.sub-text {
+  width: 60%;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  color: hsl(0, 0%, 41%);
+}
+
+.hero-text-area button {
+  padding: 1rem 2rem;
+  background: hsl(0, 0%, 8%);
+  border: 1.5px solid hsl(0, 0%, 8%);
+  width: 25%;
+  color: #fff;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease-in;
+  font-weight: 700;
+}
+
+.hero-text-area button:hover {
+  background: transparent;
+  color: hsl(0, 0%, 8%);
+}
+
+.clients {
+  display: flex;
+  list-style: none;
+  width: 80%;
+  justify-content: space-between;
+}
+
+/* MAIN IMAGE AREA STYLING */
+.hero-image-area {
+  background-image: url("./images/image-hero-desktop.png");
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+/* ATTRIBUTION STYLING */
+.attribution {
+  font-size: 12px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* MEDIA QUERIES */
+/* 900px */
+@media (max-width: 56.25em) {
+  .left-nav-lists,
+  .right-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+}
+
+/* 750px */
+@media (max-width: 46.88em) {
+}
