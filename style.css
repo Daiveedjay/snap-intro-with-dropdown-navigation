@@ -35,10 +35,12 @@ body {
   width: 50vw;
   height: 100vh;
   z-index: 2;
+  display: none;
 }
 
 .dark-overlay {
   background: rgba(0, 0, 0, 0.5);
+  display: block;
 }
 
 nav {
@@ -66,7 +68,7 @@ nav {
   font-size: 1.4rem;
   padding: 1rem 2rem;
   position: relative;
-  cursor: pointer;
+  cursor: pointer !important;
   transition: 0.2s all ease-in;
   font-weight: 500;
   transition: 0.3s all ease-in;
